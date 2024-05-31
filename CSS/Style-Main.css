@@ -1,0 +1,36 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav {
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    background-color: black; 
+    padding: 13px; 
+    text-align: left; 
+    vertical-align: middle;
+    height: 35px;
+}
+  
+nav a {
+    color: white;
+    text-decoration: none; 
+    margin-right: 20px; 
+    line-height: 35px;
+    font-size: 15pt;
+}
+  
+nav a:hover {
+    color: grey; 
+}
+
+.BilderSlides {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: auto; 
+    z-index: -1;
+}

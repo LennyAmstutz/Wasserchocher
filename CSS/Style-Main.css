@@ -1,3 +1,4 @@
+/* Allgemeine Formatierung */
 body,
 html {
   margin: 0;
@@ -8,9 +9,10 @@ html {
 }
 
 body {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: var(--bs-font-sans-serif);
 }
 
+/* Navigationsleiste */
 nav {
   position: fixed;
   top: 0;
@@ -19,7 +21,6 @@ nav {
   background-color: black;
   padding: 13px;
   text-align: left;
-  vertical-align: middle;
   height: 35px;
   z-index: 1000;
 }
@@ -36,6 +37,7 @@ nav a:hover {
   color: grey;
 }
 
+/* Slider */
 .BilderSlides {
   position: relative;
   top: 60px;
@@ -46,23 +48,39 @@ nav a:hover {
 .BilderSlides img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
+/* Inhalt */
 .content {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
-  margin-top: 20px;
-  padding: 20px;
-  text-align: center;
+  background-color: #f4f4f4;
+  width: calc(100% - 40px);
+  box-sizing: border-box;
+  margin-top: 40px;
+  margin-right: 0px;
 }
 
 .text-block {
   width: 30%;
-  padding: 10px;
+  padding: 20px;
+  text-align: left; /* Linksbündiger Text */
+  box-sizing: border-box;
 }
 
+.text-block h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.text-block p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Ticket-Sektion */
 .Tickets {
   position: relative;
   margin-top: 50px;
@@ -83,9 +101,11 @@ nav a:hover {
 }
 
 .event {
-  flex: 0 0 33.3333%; /* Zeigt drei Events gleichzeitig an */
+  flex: 0 0 33.3333%;
   box-sizing: border-box;
   padding: 10px;
+  background-color: #47474785;
+  color: white; /* Weiße Schriftfarbe */
 }
 
 .image-container {
@@ -115,6 +135,23 @@ nav a:hover {
   margin-top: 10px;
 }
 
+/* Neuer Button für den Ticketkauf */
+.buy-tickets-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.buy-tickets-button:hover {
+  background-color: grey;
+}
+
 .prev,
 .next {
   position: absolute;
@@ -135,4 +172,106 @@ nav a:hover {
 
 .next {
   right: 10px;
+}
+
+/* Kontakt-Sektion */
+.contact-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.contact-info {
+  flex: 1;
+  max-width: 300px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info p i {
+  margin-right: 10px;
+}
+
+.contact-form {
+  flex: 2;
+  max-width: 600px;
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+}
+
+.contact-form p {
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Teammitglieder */
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.team-member {
+  width: calc(25% - 20px);
+  padding: 10px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }

@@ -49,7 +49,90 @@ nav a:hover {
 }
 
 .content {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: flex-start;
   margin-top: 20px;
   padding: 20px;
   text-align: center;
+}
+
+.text-block {
+  width: 30%;
+  padding: 10px;
+}
+
+.Tickets {
+  position: relative;
+  margin-top: 50px;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+}
+
+.event-slider {
+  display: flex;
+  flex-wrap: nowrap;
+  transition: transform 0.5s ease-in-out;
+}
+
+.events {
+  display: flex;
+  width: 100%;
+}
+
+.event {
+  flex: 0 0 33.3333%; /* Zeigt drei Events gleichzeitig an */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.image-container {
+  position: relative;
+  max-width: 100%;
+  max-height: calc(33.3333vw);
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-container h2 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  margin: 0;
+}
+
+.event p {
+  margin-top: 10px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
 }

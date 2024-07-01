@@ -10,7 +10,7 @@
   <body>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Über uns</a>
+      <a href="#uber-uns">Über uns</a>
       <a href="#">Tickets</a>
       <a href="#">Kontakt</a>
       <a href="#">More</a>
@@ -20,7 +20,7 @@
       <img src="/Bilder/coming-soon.webp" alt="Bild" />
     </div>
 
-    <div class="content">
+    <div class="content" id="uber-uns">
       <div class="text-block">
         <h1>"Wasserkocher" und ihr Partywagen-Projekt</h1>
         <p>
@@ -122,130 +122,34 @@
       <div class="event-slider">
         <div class="events">
           <div class="event">
-            <div class="image-container">
-              <img
-                src="../Bilder/Events/TestEvent/Test Event.jpeg"
-                alt="Event dnb"
-              />
-              <div class="overlay">
-                <div class="text">
-                  <h2>Event 1</h2>
-                  <p>dnb auf bike</p>
-                </div>
-                <div class="button">
-                  <a
-                    href="https://www.ticketwebsite.com/event1"
-                    class="buy-tickets-button"
-                    >Tickets kaufen</a
-                  >
-                </div>
-              </div>
-            </div>
+            <img
+              src="../Bilder/Events/TestEvent/Test Event.jpeg"
+              alt="Event 1"
+            />
+            <h3>New York</h3>
+            <p>Fri 27 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="buy-tickets-button">Buy Tickets</button>
           </div>
           <div class="event">
-            <div class="image-container">
-              <img
-                src="../Bilder/Events/TestEvent/Test Event.jpeg"
-                alt="Event dnb"
-              />
-              <div class="overlay">
-                <div class="text">
-                  <h2>Event 2</h2>
-                  <p>Details zum Event 2</p>
-                </div>
-                <div class="button">
-                  <a
-                    href="https://www.ticketwebsite.com/event2"
-                    class="buy-tickets-button"
-                    >Tickets kaufen</a
-                  >
-                </div>
-              </div>
-            </div>
+            <img
+              src="../Bilder/Events/TestEvent/Test Event.jpeg"
+              alt="Event 2"
+            />
+            <h3>Paris</h3>
+            <p>Sat 28 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="buy-tickets-button">Buy Tickets</button>
           </div>
           <div class="event">
-            <div class="image-container">
-              <img
-                src="../Bilder/Events/TestEvent/Test Event.jpeg"
-                alt="Event dnb"
-              />
-              <div class="overlay">
-                <div class="text">
-                  <h2>Event 3</h2>
-                  <p>Details zum Event 3</p>
-                </div>
-                <div class="button">
-                  <a
-                    href="https://www.ticketwebsite.com/event3"
-                    class="buy-tickets-button"
-                    >Tickets kaufen</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="image-container">
-              <img
-                src="../Bilder/Events/TestEvent/Test Event.jpeg"
-                alt="Event dnb"
-              />
-              <div class="overlay">
-                <div class="text">
-                  <h2>Event 4</h2>
-                  <p>Details zum Event 4</p>
-                </div>
-                <div class="button">
-                  <a
-                    href="https://www.ticketwebsite.com/event4"
-                    class="buy-tickets-button"
-                    >Tickets kaufen</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="image-container">
-              <img
-                src="../Bilder/Events/TestEvent/Test Event.jpeg"
-                alt="Event dnb"
-              />
-              <div class="overlay">
-                <div class="text">
-                  <h2>Event 5</h2>
-                  <p>Details zum Event 5</p>
-                </div>
-                <div class="button">
-                  <a
-                    href="https://www.ticketwebsite.com/event5"
-                    class="buy-tickets-button"
-                    >Tickets kaufen</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="image-container">
-              <img
-                src="../Bilder/Events/TestEvent/Test Event.jpeg"
-                alt="Event dnb"
-              />
-              <div class="overlay">
-                <div class="text">
-                  <h2>Event 6</h2>
-                  <p>Details zum Event 6</p>
-                </div>
-                <div class="button">
-                  <a
-                    href="https://www.ticketwebsite.com/event6"
-                    class="buy-tickets-button"
-                    >Tickets kaufen</a
-                  >
-                </div>
-              </div>
-            </div>
+            <img
+              src="../Bilder/Events/TestEvent/Test Event.jpeg"
+              alt="Event 3"
+            />
+            <h3>San Francisco</h3>
+            <p>Sun 29 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="buy-tickets-button">Buy Tickets</button>
           </div>
         </div>
       </div>
@@ -276,10 +180,30 @@
 
     <footer>
       <p>&copy; 2024 Wasserkocher | Design by Wasserkocher Team</p>
-      <p>
-        <a href="#"> </a>
+      <p class="footer-icons">
+        <a href="#">
+          <img src="/Bilder/twitter.png" alt="Twitter" width="30" height="30" />
+        </a>
+        <a href="#">
+          <img
+            src="/Bilder/instagram.png"
+            alt="Instagram"
+            width="30"
+            height="30"
+          />
+        </a>
+        <a href="#" onclick="showFacebookAlert()">
+          <img
+            src="/Bilder/facebook.png"
+            alt="Facebook"
+            width="30"
+            height="30"
+          />
+        </a>
       </p>
     </footer>
+
     <script src="../Javascript/Slider.js"></script>
+    <script src="../Javascript/WebseitenBesuchen.js"></script>
   </body>
 </html>

@@ -1,18 +1,20 @@
-let currentSlide = 0;
-const slides = document.querySelectorAll(".event");
+let slideIndex = 0;
+const slides = document.querySelectorAll(".events .event");
 const totalSlides = slides.length;
 
 function showSlide(index) {
   const slider = document.querySelector(".event-slider");
-  slider.style.transform = `translateX(${-index * 100}%)`;
+  slider.style.transform = `translateX(-${(index * 100) / totalSlides}%)`;
 }
 
 function prevSlide() {
-  currentSlide = currentSlide > 0 ? currentSlide - 1 : totalSlides - 1;
-  showSlide(currentSlide);
+  slideIndex = slideIndex > 0 ? slideIndex - 1 : totalSlides - 1;
+  showSlide(slideIndex);
 }
 
 function nextSlide() {
-  currentSlide = currentSlide < totalSlides - 1 ? currentSlide + 1 : 0;
-  showSlide(currentSlide);
+  slideIndex = slideIndex < totalSlides - 1 ? slideIndex + 1 : 0;
+  showSlide(slideIndex);
 }
+
+showSlide(slideIndex);

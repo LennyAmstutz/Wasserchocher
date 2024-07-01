@@ -6,10 +6,8 @@ html {
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-}
-
-body {
-  font-family: var(--bs-font-sans-serif);
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
 /* Scrollbar Styling */
@@ -18,7 +16,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #ddd;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -36,15 +34,15 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: black;
+  background-color: #1e1e1e;
   padding: 13px;
   text-align: left;
-  height: 35px;
+  height: 50px;
   z-index: 1000;
 }
 
 nav a {
-  color: white;
+  color: #f1f1f1;
   text-decoration: none;
   margin-right: 20px;
   line-height: 35px;
@@ -52,7 +50,7 @@ nav a {
 }
 
 nav a:hover {
-  color: grey;
+  color: #ffa500;
 }
 
 /* Slider */
@@ -72,30 +70,32 @@ nav a:hover {
 /* Inhalt */
 .content {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: flex-start;
-  background-color: #f4f4f4;
-  width: calc(100% - 40px);
-  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ddd;
   margin-top: 40px;
-  margin-right: 0px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .text-block {
   width: 30%;
   padding: 20px;
-  text-align: left; /* Linksbündiger Text */
-  box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .text-block h1 {
   font-size: 24px;
   margin-bottom: 15px;
+  color: #333;
 }
 
 .text-block p {
   font-size: 16px;
   line-height: 1.5;
+  color: #555;
 }
 
 /* Ticket-Sektion */
@@ -105,6 +105,7 @@ nav a:hover {
   overflow: hidden;
   width: 100%;
   text-align: center;
+  background-color: #000;
 }
 
 .event-slider {
@@ -121,65 +122,46 @@ nav a:hover {
 .event {
   flex: 0 0 33.3333%;
   box-sizing: border-box;
-  padding: 10px;
-  background-color: #47474785;
-  color: white; /* Weiße Schriftfarbe */
+  padding: 20px;
+  background-color: #fff;
+  color: #333;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
 }
 
-.image-container {
-  position: relative;
-  max-width: 100%;
-  max-height: calc(33.3333vw);
-  overflow: hidden;
-}
-
-.image-container img {
+.event img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 5px;
 }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  box-sizing: border-box;
-  background: #47474785;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
+.event h3 {
+  margin: 15px 0 5px;
+  font-size: 1.25em;
 }
 
-.text {
-  text-align: left;
-}
-
-.button {
-  text-align: right;
-}
-
-.overlay h2,
-.overlay p,
-.overlay .buy-tickets-button {
-  color: white;
+.event p {
   margin: 5px 0;
+  color: #666;
 }
 
 .buy-tickets-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: black;
-  color: white;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
   text-decoration: none;
-  font-size: 16px;
   border-radius: 5px;
+  margin-top: 10px;
   transition: background-color 0.3s ease;
 }
 
 .buy-tickets-button:hover {
-  background-color: grey;
+  background-color: #333;
 }
 
 .prev,
@@ -204,12 +186,20 @@ nav a:hover {
   right: 10px;
 }
 
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
 /* Kontakt-Sektion */
 .contact-section {
   display: flex;
   justify-content: space-around;
   padding: 50px 20px;
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
 .contact-info {
@@ -221,6 +211,7 @@ nav a:hover {
   margin: 10px 0;
   display: flex;
   align-items: center;
+  color: #333;
 }
 
 .contact-info p i {
@@ -256,7 +247,7 @@ nav a:hover {
 .contact-form button {
   padding: 10px;
   border: none;
-  background-color: black;
+  background-color: #1e1e1e;
   color: white;
   font-size: 16px;
   cursor: pointer;
@@ -264,7 +255,7 @@ nav a:hover {
 }
 
 footer {
-  background-color: #333;
+  background-color: #1e1e1e;
   color: white;
   text-align: center;
   padding: 10px 0;
@@ -292,16 +283,41 @@ footer a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  background-color: #f4f4f4;
+  padding: 20px;
 }
 
 .team-member {
   width: calc(25% - 20px);
   padding: 10px;
   text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 .team-member img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.team-member p {
+  color: #555;
+}
+
+.footer-icons a img {
+  filter: grayscale(100%);
+}
+
+.footer-icons a:hover img {
+  filter: none;
 }

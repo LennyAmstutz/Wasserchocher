@@ -1,20 +1,27 @@
 let slideIndex = 0;
-const slides = document.querySelectorAll(".events .event");
-const totalSlides = slides.length;
+let slides = document.getElementsByClassName("mySlides");
 
-function showSlide(index) {
-  const slider = document.querySelector(".event-slider");
-  slider.style.transform = `translateX(-${(index * 100) / totalSlides}%)`;
+function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.opacity = "0";  
+        slides[i].style.animationName = "";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+
+    let currentSlide = slides[slideIndex - 1];
+    currentSlide.style.display = "block";
+    currentSlide.style.animationName = "slideInLeft";
+    currentSlide.style.opacity = "1";
+
+    setTimeout(() => {
+        currentSlide.style.animationName = "slideOutLeft";
+        setTimeout(() => {
+            currentSlide.style.display = "none";
+        }, 1000); // Dauer der Animation muss hier übereinstimmen
+    }, 4000); // Zeigt das Bild für 4 Sekunden (da die Animation 1 Sekunde dauert)
+
+    setTimeout(showSlides, 5000); // Wechsel alle 5 Sekunden
 }
 
-function prevSlide() {
-  slideIndex = slideIndex > 0 ? slideIndex - 1 : totalSlides - 1;
-  showSlide(slideIndex);
-}
-
-function nextSlide() {
-  slideIndex = slideIndex < totalSlides - 1 ? slideIndex + 1 : 0;
-  showSlide(slideIndex);
-}
-
-showSlide(slideIndex);
+showSlides();

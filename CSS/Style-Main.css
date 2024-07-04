@@ -1,318 +1,317 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@300;400;600&display=swap");
 
 /* Allgemeine Formatierung */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
 }
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #ddd;
+  background: #ddd;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
+  background: #888;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
 
 /* Navigationsleiste */
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #1e1e1e;
-    padding: 13px;
-    text-align: center;
-    height: 50px;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1e1e1e;
+  padding: 13px;
+  text-align: center;
+  height: 50px;
+  z-index: 1000;
 }
 
 nav a {
-    color: #f1f1f1;
-    text-decoration: none;
-    margin: 0 20px;
-    line-height: 35px;
-    font-size: 15pt;
+  color: #f1f1f1;
+  text-decoration: none;
+  margin: 0 20px;
+  line-height: 35px;
+  font-size: 15pt;
 }
 
 nav a:hover {
-    color: #ffa500;
+  color: #ffa500;
 }
 
 /* Slider */
 .BilderSlides {
-    position: relative;
-    top: 60px; 
-    width: 100vw; 
-    height: auto; 
-    overflow: hidden; 
+  position: relative;
+  top: 60px;
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
 }
 
 .BilderSlides img {
-    width: 100%; 
-    height: auto; 
-    display: block; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    opacity: 0; 
-    animation-duration: 1s; 
-    animation-fill-mode: both; 
+  width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 @keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideOutLeft {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 }
-
 
 /* Inhalt */
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin-top: 40px;
-    padding: 20px;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-top: 40px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .text-block {
-    width: 80%;
-    max-width: 800px;
-    padding: 20px;
-    margin-bottom: 20px;
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .text-block h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    color: #333;
-    font-family: 'Lora', serif;
-    font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #333;
+  font-family: "Lora", serif;
+  font-weight: 700;
 }
 
 .text-block p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #555;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
 /* Ticket-Sektion */
 .Tickets {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    width: 100%;
-    text-align: center;
-    background-color: #000000;
-    padding: 20px 0;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+  background-color: #000000;
+  padding: 20px 0;
 }
 
 .Tickets h2 {
-    font-size: 28px;
-    font-family: 'Lora', serif;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #333;
+  font-size: 28px;
+  font-family: "Lora", serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .events {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .event {
-    flex: 0 1 30%;
-    box-sizing: border-box;
-    padding: 15px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    transition: transform 0.3s;
-    text-align: left;
+  flex: 0 1 30%;
+  box-sizing: border-box;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s;
+  text-align: left;
 }
 
 .event img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px 8px 0 0;
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
 }
 
 .event h3 {
-    font-size: 20px;
-    margin: 10px 0;
-    color: #333;
-    font-family: 'Lora', serif;
-    font-weight: 700;
+  font-size: 20px;
+  margin: 10px 0;
+  color: #333;
+  font-family: "Lora", serif;
+  font-weight: 700;
 }
 
 .event .date {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 10px;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
 }
 
 .event .description {
-    font-size: 16px;
-    color: #555;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    margin-bottom: 20px;
+  font-size: 16px;
+  color: #555;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin-bottom: 20px;
 }
 
 .buy-tickets-button {
-    padding: 10px 20px;
-    background-color: #1e1e1e;
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    display: inline-block;
+  padding: 10px 20px;
+  background-color: #1e1e1e;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  display: inline-block;
 }
 
 .buy-tickets-button:hover {
-    background-color: #333;
+  background-color: #333;
 }
 
 /* Kontakt-Sektion */
 .contact-section {
-    display: flex;
-    justify-content: center;
-    padding: 50px 20px;
-    background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #fff;
 }
 
 .contact-info {
-    flex: 1;
-    max-width: 300px;
-    text-align: left;
+  flex: 1;
+  max-width: 300px;
+  text-align: left;
 }
 
 .contact-info p {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    color: #333;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  color: #333;
 }
 
 .contact-info p i {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .contact-form {
-    flex: 2;
-    max-width: 600px;
-    text-align: left;
+  flex: 2;
+  max-width: 600px;
+  text-align: left;
 }
 
 .contact-form h2 {
-    margin-bottom: 10px;
-    font-family: 'Lora', serif;
-    font-weight: 700;
+  margin-bottom: 10px;
+  font-family: "Lora", serif;
+  font-weight: 700;
 }
 
 .contact-form p {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .contact-form form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-form input,
 .contact-form textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .contact-form button {
-    padding: 10px;
-    border: none;
-    background-color: #1e1e1e;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
+  padding: 10px;
+  border: none;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 footer {
-    background-color: #1e1e1e;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  background-color: #1e1e1e9c;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 footer p {
-    margin: 5px 0;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+  margin: 5px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
 footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 5px;
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
 }
 
 footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .footer-icons a img {
-    filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .footer-icons a:hover img {
-    filter: none;
+  filter: none;
 }

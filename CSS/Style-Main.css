@@ -54,7 +54,7 @@ html {
   background: #555;
 }
 
-/* Responsive Navigation */
+/* Navigationsleiste */
 nav {
   position: fixed;
   top: 0;
@@ -65,64 +65,55 @@ nav {
   text-align: center;
   height: 50px;
   z-index: 1000;
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-nav .menu-toggle {
+.logo {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 20pt;
+  font-weight: 700;
+}
+
+.menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
 }
 
-nav .bar {
+.menu-toggle .bar {
+  background-color: #f1f1f1;
   height: 3px;
   width: 25px;
-  background-color: #fff;
-  margin: 4px 0;
+  margin: 3px 0;
+  transition: 0.3s;
 }
 
-nav ul {
+.nav-links {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  align-items: center;
 }
 
-nav ul li {
-  margin: 0 20px;
-}
-
-nav ul li a {
+.nav-links a {
   color: #f1f1f1;
   text-decoration: none;
+  margin: 0 20px;
   line-height: 35px;
   font-size: 15pt;
 }
 
-nav ul li a:hover {
-  color: #6c8ba3; /* Geänderte Farbe zu einem dunklen Blau */
+.nav-links a:hover {
+  color: #ffa500;
 }
 
-/* Zentrierte Navigation auf größeren Bildschirmen */
-@media (min-width: 769px) {
-  nav {
-    justify-content: center; /* Zentriert die gesamte Navigation */
-  }
-
-  nav ul {
-    justify-content: center; /* Zentriert die Navigationselemente */
-  }
-}
-
-/* Mobile Responsive Navigation */
+/* Mobile Navigation */
 @media (max-width: 768px) {
-  nav .menu-toggle {
-    display: flex;
-  }
-
-  nav ul {
+  .nav-links {
     display: none;
     flex-direction: column;
     width: 100%;
@@ -130,236 +121,243 @@ nav ul li a:hover {
     position: absolute;
     top: 50px;
     left: 0;
+    padding: 20px 0;
   }
 
-  nav ul.active {
+  .nav-links.active {
     display: flex;
   }
 
-  nav ul li {
-    text-align: center;
-    margin: 0;
+  .nav-links a {
+    margin: 10px 0;
+    font-size: 18pt;
   }
 
-  nav ul li a {
-    padding: 15px 0;
-    font-size: 20px;
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu-toggle .bar {
+    background-color: #f1f1f1;
   }
 }
 
-/* Text Block */
+/* Inhalt */
 .content {
-  padding: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-top: 40px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .text-block {
+  width: 80%;
+  max-width: 800px;
   padding: 20px;
-  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .text-block h1 {
-  font-size: 30px;
+  font-size: 32px;
+  margin-bottom: 15px;
   color: #333;
-  margin-bottom: 20px;
+  font-family: "Lora", serif;
+  font-weight: 700;
+  text-align: center;
 }
 
 .text-block p {
   font-size: 16px;
-  color: #666;
   line-height: 1.5;
-}
-
-/* Tickets Section */
-.Tickets {
-  background-color: #1e1e1e;
-  padding: 50px 20px;
+  color: #555;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
   text-align: center;
 }
 
+/* Ticket-Sektion */
+.Tickets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+  background-color: #000000;
+  padding: 20px 0;
+}
+
 .Tickets h2 {
-  color: #f1f1f1;
-  font-size: 30px;
-  margin-bottom: 40px;
+  font-size: 28px;
+  font-family: "Lora", serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000000;
 }
 
 .events {
   display: flex;
   justify-content: center;
-  gap: 20px;
   flex-wrap: wrap;
-}
-
-/* Event Section */
-.event {
-  background-color: #2c2c2c; /* Dunkleres Grau für besseren Kontrast */
-  border-radius: 10px;
+  gap: 20px;
   padding: 20px;
-  text-align: center;
-  width: 300px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Weicher Schatten */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.event:hover {
-  transform: translateY(-10px); /* Hebt das Event-Kästchen leicht an */
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Verstärkt den Schatten beim Hover */
+.event {
+  flex: 0 1 30%;
+  box-sizing: border-box;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s;
+  text-align: left;
 }
 
-.event h3 {
-  font-size: 24px; /* Größere Schriftgröße */
-  color: #f1f1f1; /* Geänderte Farbe zu einem dunklen Blau */
-  margin-bottom: 10px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Leichter Textschatten */
-}
-
-.event p {
-  color: #f1f1f1;
-  margin-bottom: 15px;
-  font-size: 16px; /* Etwas größere Schrift */
-}
-
-/* Buy Tickets Button */
-.buy-tickets-button {
-  background-color: #666; /* Geänderte Farbe zu einem dunklen Blau */
-  color: #fff;
-  padding: 12px 25px; /* Etwas größerer Button */
-  text-decoration: none;
-  border-radius: 25px; /* Runde Kanten */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Animationen hinzugefügt */
-}
-
-.buy-tickets-button:hover {
-  background-color: #666; /* Dunklerer Blauton beim Hover */
-  transform: translateY(-2px); /* Button hebt sich leicht an */
-}
-
-/* Event Image */
 .event img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Schatten um das Bild */
-  transition: transform 0.3s ease;
+  border-radius: 8px 8px 0 0;
 }
 
-.event img:hover {
-  transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
-}
-
-/* Contact Section */
-.contact-section {
-  background-color: #f8f8f8;
-  padding: 50px 20px;
-}
-
-.contact-info {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.contact-info h2 {
-  font-size: 28px;
+.event h3 {
+  font-size: 20px;
+  margin: 10px 0;
   color: #333;
-  margin-bottom: 20px;
+  font-family: "Lora", serif;
+  font-weight: 700;
 }
 
-.contact-info p {
-  font-size: 18px;
-  color: #666;
+.event .date {
+  font-size: 14px;
+  color: #777;
   margin-bottom: 10px;
 }
 
-/* Support Section */
-.support-section {
-  background-color: #f4f4f4;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.support-section h2 {
-  color: #333;
-  font-size: 30px;
-  margin-bottom: 30px;
-}
-
-.support-content p {
-  color: #666;
-  font-size: 18px;
+.event .description {
+  font-size: 16px;
+  color: #555;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
   margin-bottom: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
 }
 
-/* Footer Section */
+.buy-tickets-button {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.buy-tickets-button:hover {
+  background-color: #000000;
+}
+
+/* Kontakt-Sektion */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.contact-info {
+  flex: 1;
+  max-width: 300px;
+  text-align: left;
+}
+
+.contact-info p {
+  margin-top: 10px;
+  margin-left: -10px;
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.contact-info p i {
+  margin-right: 10px;
+}
+
+.contact-form {
+  flex: 2;
+  max-width: 600px;
+  text-align: left;
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+  font-family: "Lora", serif;
+  font-weight: 700;
+}
+
+.contact-form p {
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px;
+  border: none;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
+  background-color: #1e1e1e9c;
+  color: white;
   text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 footer p {
   margin: 5px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
 
-.footer-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 10px;
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
 }
 
-.footer-icons img {
-  filter: invert(100%);
-  transition: filter 0.3s ease;
+footer a:hover {
+  text-decoration: underline;
 }
 
-.footer-icons img:hover {
-  filter: invert(60%);
+.footer-icons a img {a
+  filter: grayscale(100%);
 }
 
-/* Media Queries */
-@media (max-width: 1200px) {
-  .events {
-    justify-content: space-between;
-  }
-}
-
-@media (max-width: 768px) {
-  .events {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .text-block h1 {
-    font-size: 24px;
-  }
-
-  .text-block p {
-    font-size: 14px;
-  }
-
-  .Tickets h2 {
-    font-size: 24px;
-  }
-
-  .event {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .contact-info h2 {
-    font-size: 24px;
-  }
-
-  .contact-info p {
-    font-size: 16px;
-  }
+.footer-icons a:hover img {
+  filter: none;
 }

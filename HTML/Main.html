@@ -13,29 +13,30 @@
   </head>
   <body>
     <nav>
-      <a href="#">Home</a>
-      <a href="#uber-uns">Über uns</a>
-      <a href="#">Tickets</a>
-      <a href="#">Kontakt</a>
-      <a href="#">More</a>
+      <div class="nav-container">
+        <a href="#" class="logo">Wasserkocher</a>
+        <div class="menu-toggle" id="menuToggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <a href="#">Home</a>
+          <a href="#uber-uns">Über uns</a>
+          <a href="#">Tickets</a>
+          <a href="#">Kontakt</a>
+          <a href="#">More</a>
+        </div>
+      </div>
     </nav>
 
-    <div class="BilderSlides">
+    <div class="hero-image-slider">
       <img
-        class="mySlides"
         src="../Bilder/Events/Event/MischpultBild_Querformat.jpg"
         alt="Bild 1"
+        class="active"
       />
-      <img
-        class="mySlides"
-        src="../Bilder/Events/Event/WagenGrün.png"
-        alt="Bild 2"
-      />
-      <img
-        class="mySlides"
-        src="../Bilder/Events/Event/WagenVonDrausen.jpg"
-        alt="Bild 3"
-      />
+      <img src="../Bilder/Events/Event/WagenGrün.png" alt="Bild 1" />
     </div>
 
     <div class="content" id="uber-uns">
@@ -108,10 +109,10 @@
       </div>
       <div class="contact-form">
         <h2>Schreib ein Kommentar</h2>
-        <form>
-          <input type="text" name="name" placeholder="Name" />
-          <input type="email" name="email" placeholder="Email" />
-          <textarea name="message" placeholder="Message"></textarea>
+        <form id="contactForm" action="PHP/SendEmail.php" method="POST">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="message" placeholder="Message" required></textarea>
           <button type="submit">SEND</button>
         </form>
       </div>
@@ -145,5 +146,39 @@
 
     <script src="../Javascript/WebseitenBesuchen.js"></script>
     <script src="../Javascript/Slider.js"></script>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Verhindert das Laden einer neuen Seite
+
+          // Formulardaten erfassen
+          var formData = new FormData(this);
+
+          // AJAX Anfrage senden
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", "../PHP/SendEmail.php", true);
+          xhr.onload = function () {
+            if (xhr.status === 200) {
+              // Antwort von PHP-Skript anzeigen
+              alert(xhr.responseText);
+            } else {
+              alert(
+                "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+              );
+            }
+          };
+          xhr.send(formData);
+        });
+    </script>
+
+    <script>
+      document
+        .getElementById("menuToggle")
+        .addEventListener("click", function () {
+          document.getElementById("navLinks").classList.toggle("active");
+        });
+    </script>
   </body>
 </html>

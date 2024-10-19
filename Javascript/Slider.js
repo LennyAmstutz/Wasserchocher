@@ -1,29 +1,38 @@
-let slideIndex = 0;
-let slides = document.getElementsByClassName("mySlides");
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".hero-image-slider img");
+  const totalImages = images.length;
+  let imageOrder = [...Array(totalImages).keys()]; // Erstelle ein Array mit den Indizes [0, 1, 2]
+  let currentIndex = 0;
 
-function showSlides() {
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.opacity = "0";
-    slides[i].style.animationName = "";
+  // Funktion zum Mischen der Bildreihenfolge
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
+
+  // Funktion zum Wechseln des Bildes
+  function changeImage() {
+    // Aktuelles Bild ausblenden
+    const currentImage = images[imageOrder[currentIndex]];
+    currentImage.classList.remove("active");
+
+    // Nächsten Index berechnen und Reihenfolge bei Bedarf mischen
+    currentIndex = (currentIndex + 1) % totalImages;
+
+    if (currentIndex === 0) {
+      shuffleArray(imageOrder); // Mische die Reihenfolge neu, wenn alle Bilder gezeigt wurden
+    }
+
+    // Neues Bild einblenden
+    const nextImage = images[imageOrder[currentIndex]];
+    nextImage.classList.add("active");
   }
 
-  let currentSlide = slides[slideIndex - 1];
-  currentSlide.style.display = "block";
-  currentSlide.style.animationName = "slideInLeft";
-  currentSlide.style.opacity = "1";
+  // Bild alle 3 Sekunden ändern
+  setInterval(changeImage, 3000);
 
-  setTimeout(() => {
-    currentSlide.style.animationName = "slideOutLeft";
-    setTimeout(() => {
-      currentSlide.style.display = "none";
-    }, 1000); // Dauer der Animation muss hier übereinstimmen
-  }, 4000); // Zeigt das Bild für 4 Sekunden (da die Animation 1 Sekunde dauert)
-
-  setTimeout(showSlides, 5000); // Wechsel alle 5 Sekunden
-}
-
-showSlides();
+  // Starte mit dem ersten Bild
+  images[imageOrder[currentIndex]].classList.add("active");
+});

@@ -13,6 +13,29 @@ html {
   background-color: #f4f4f4;
 }
 
+/* Fullscreen Image Slider Section */
+.hero-image-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-image-slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-image-slider img.active {
+  opacity: 1;
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 10px;
@@ -44,7 +67,39 @@ nav {
   z-index: 1000;
 }
 
-nav a {
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 20pt;
+  font-weight: 700;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  background-color: #f1f1f1;
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
   color: #f1f1f1;
   text-decoration: none;
   margin: 0 20px;
@@ -52,50 +107,38 @@ nav a {
   font-size: 15pt;
 }
 
-nav a:hover {
+.nav-links a:hover {
   color: #ffa500;
 }
 
-/* Slider */
-.BilderSlides {
-  position: relative;
-  top: 60px;
-  width: 100vw;
-  height: auto;
-  overflow: hidden;
-}
-
-.BilderSlides img {
-  width: 100%;
-  height: auto;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1e1e1e;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 20px 0;
   }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 
-@keyframes slideOutLeft {
-  from {
-    transform: translateX(0);
-    opacity: 1;
+  .nav-links.active {
+    display: flex;
   }
-  to {
-    transform: translateX(-100%);
-    opacity: 0;
+
+  .nav-links a {
+    margin: 10px 0;
+    font-size: 18pt;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu-toggle .bar {
+    background-color: #f1f1f1;
   }
 }
 
@@ -124,6 +167,7 @@ nav a:hover {
   color: #333;
   font-family: "Lora", serif;
   font-weight: 700;
+  text-align: center;
 }
 
 .text-block p {
@@ -132,6 +176,7 @@ nav a:hover {
   color: #555;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  text-align: center;
 }
 
 /* Ticket-Sektion */
@@ -151,7 +196,7 @@ nav a:hover {
   font-family: "Lora", serif;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #333;
+  color: #000000;
 }
 
 .events {
@@ -205,7 +250,7 @@ nav a:hover {
 
 .buy-tickets-button {
   padding: 10px 20px;
-  background-color: #1e1e1e;
+  background-color: #000000;
   color: white;
   text-decoration: none;
   font-size: 14px;
@@ -215,7 +260,7 @@ nav a:hover {
 }
 
 .buy-tickets-button:hover {
-  background-color: #333;
+  background-color: #000000;
 }
 
 /* Kontakt-Sektion */
@@ -233,7 +278,8 @@ nav a:hover {
 }
 
 .contact-info p {
-  margin: 10px 0;
+  margin-top: 10px;
+  margin-left: -10px;
   display: flex;
   align-items: center;
   color: #333;

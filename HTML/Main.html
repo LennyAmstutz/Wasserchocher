@@ -1,10 +1,12 @@
+
+You said:
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wasserkocher</title>
-    <link rel="icon" type="image/jpg" href="/Bilder/Wasserchocherlogo.jpg" />
+    <title>Wasserchocher</title>
+    <link rel="icon" type="image/jpg" href="../Bilder/Wasserchocherlogo.jpg" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
@@ -13,21 +15,17 @@
   </head>
   <body>
     <nav>
-      <div class="nav-container">
-        <a href="#" class="logo">Wasserkocher</a>
-        <div class="menu-toggle" id="menuToggle">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <div class="nav-links" id="navLinks">
-          <a href="#">Home</a>
-          <a href="#uber-uns">Über uns</a>
-          <a href="#">Tickets</a>
-          <a href="#">Kontakt</a>
-          <a href="#">More</a>
-        </div>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
+      <ul class="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#uber-uns">Über uns</a></li>
+        <li><a href="#ticket">Tickets</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
     </nav>
 
     <div class="hero-image-slider">
@@ -41,20 +39,20 @@
 
     <div class="content" id="uber-uns">
       <div class="text-block">
-        <h1>"Wasserkocher" und ihr Partywagen-Projekt</h1>
+        <h1>"Wasserchocher" und ihr Partywagen-Projekt</h1>
         <p>
-          Der "Wasserkocher" ist ein Partywagen, der von Einwohnern aus Stans
+          Der "Wasserchocher" ist ein Partywagen, der von Einwohnern aus Stans
           und Ennetmoos aus einem alten SPAG Bauwagen umgebaut wurde. Er wurde
           erstmals bei der Fasnacht in Stans 2024 eingesetzt und dient als
           mobiler Veranstaltungsraum für Feiern und Events. Der Verein
-          "Wasserkocher" steht für Gemeinschaftssinn, kreative Projekte und
+          "Wasserchocher" steht für Gemeinschaftssinn, kreative Projekte und
           Nachhaltigkeit. Der SPAG Bauwagen, der bei der Fasnacht in Stans 2024
           im Einsatz war, fand nach seinem ersten Leben einen neuen Zweck. Dank
-          der Initiative und des handwerklichen Geschicks der "Wasserkocher"
+          der Initiative und des handwerklichen Geschicks der "Wasserchocher"
           wurde er in einen Partywagen umgewandelt, der für Feiern und
           Veranstaltungen genutzt werden kann. Dieser Recycling-Ansatz verleiht
           dem Partywagen nicht nur einen besonderen Charme, sondern betont auch
-          die Nachhaltigkeit des Projekts. "Wasserkocher" stehen für mehr als
+          die Nachhaltigkeit des Projekts. "Wasserchocher" stehen für mehr als
           nur einen Partywagen oder ein Event im Senkel. Sie repräsentieren den
           Gemeinschaftssinn, die Zusammenarbeit und die Leidenschaft für
           kreative Projekte. Ihr Engagement und ihre Begeisterung haben bereits
@@ -64,121 +62,68 @@
       </div>
     </div>
 
-    <div class="Tickets">
+    <div class="Tickets" id="ticket">
       <h2 style="color: white">Upcoming Events</h2>
-      <div class="events">
+        <!--
+                <div class="events">
         <div class="event">
           <img
-            src="../Bilder/Events/TestEvent/Test Event.jpeg"
+            src="../Bilder/Events/RealEvent/Bildschirmfoto 2024-08-14 um 22.13.35.png"
             alt="New York"
           />
-          <h3>Stans</h3>
-          <p class="date">Sam 24 Aug 2024</p>
-          <p class="description">Eröffnung Eichlipark</p>
-          <a href="#" class="buy-tickets-button">Buy Tickets</a>
+          <h3>Commingsoon</h3>
+          <p class="date">Commingsoon</p>
+          <p class="description">Commingsoon</p>
+          <a href="" class="buy-tickets-button">Buy Tickets</a>
         </div>
-        <div class="event">
-          <img src="../Bilder/Events/TestEvent/Test Event.jpeg" alt="Paris" />
-          <h3>Comming soon</h3>
-          <p class="date">Datum wird noch bekannt gegeben.</p>
-          <p class="description">Comming soon</p>
-          <a href="#" class="buy-tickets-button">Buy Tickets</a>
-        </div>
-        <div class="event">
-          <img
-            src="../Bilder/Events/TestEvent/Test Event.jpeg"
-            alt="San Francisco"
-          />
-          <h3>Comming soon</h3>
-          <p class="date">Datum wird noch bekannt gegeben.</p>
-          <p class="description">Comming soon</p>
-          <a href="#" class="buy-tickets-button">Buy Tickets</a>
-        </div>
+      </div>
+        -->
+    </div>
+
+    <div class="support-section" id="support">
+      <h2>Unterstützen Sie uns</h2>
+      <div class="support-content">
+        <p>
+          Möchten Sie unsere kreativen Projekte und Events unterstützen? Ihre
+          Spende hilft uns, den Partywagen weiter auszubauen und neue Veranstaltungen
+          zu planen. Jede Unterstützung wird geschätzt!
+        </p>
       </div>
     </div>
 
-    <div class="contact-section">
+    <div class="contact-section" id="contact">
       <div class="contact-info">
         <h2>Kontaktiere uns</h2>
         <p>
           <i class="fas fa-map-marker-alt"></i> Adresse: Weidlistrasse 2, <br />
           6370 Stans
         </p>
-        <p><i class="fas fa-phone-alt"></i> Telefon: +49 123 456789</p>
-        <p><i class="fas fa-envelope"></i> Email: wasserchercher@gmail.com</p>
-      </div>
-      <div class="contact-form">
-        <h2>Schreib ein Kommentar</h2>
-        <form id="contactForm" action="PHP/SendEmail.php" method="POST">
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <textarea name="message" placeholder="Message" required></textarea>
-          <button type="submit">SEND</button>
-        </form>
+        <p><i class="fas fa-phone-alt"></i> Telefon: +41 76 604 65 12</p>
+        <p><i class="fas fa-envelope"></i> Email: wasserchocher@gmail.com</p>
       </div>
     </div>
 
     <footer>
-      <p>&copy; 2024 Wasserkocher | Design by Wasserkocher Team</p>
-      <p class="footer-icons">
-        <a href="#"
-          ><img src="/Bilder/twitter.png" alt="Twitter" width="30" height="30"
-        /></a>
-        <a href="#"
+      <p>&copy; 2024 Wasserchocher | Design by Wasserchocher Team</p>
+        <a href="https://www.instagram.com/wasserchocher/"
           ><img
             src="/Bilder/instagram.png"
             alt="Instagram"
             width="30"
             height="30"
         /></a>
-        <a href="#" onclick="showFacebookAlert()"
-          ><img
-            src="/Bilder/facebook.png"
-            alt="Facebook"
-            width="30"
-            height="30"
-        /></a>
-        <a href="#" onclick="showFacebookAlert()"
-          ><img src="/Bilder/tiktok.png" alt="Facebook" width="30" height="30"
-        /></a>
       </p>
     </footer>
 
     <script src="../Javascript/WebseitenBesuchen.js"></script>
     <script src="../Javascript/Slider.js"></script>
-
     <script>
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Verhindert das Laden einer neuen Seite
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navList = document.querySelector(".nav-list");
 
-          // Formulardaten erfassen
-          var formData = new FormData(this);
-
-          // AJAX Anfrage senden
-          var xhr = new XMLHttpRequest();
-          xhr.open("POST", "../PHP/SendEmail.php", true);
-          xhr.onload = function () {
-            if (xhr.status === 200) {
-              // Antwort von PHP-Skript anzeigen
-              alert(xhr.responseText);
-            } else {
-              alert(
-                "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
-              );
-            }
-          };
-          xhr.send(formData);
-        });
-    </script>
-
-    <script>
-      document
-        .getElementById("menuToggle")
-        .addEventListener("click", function () {
-          document.getElementById("navLinks").classList.toggle("active");
-        });
+      mobileMenu.addEventListener("click", () => {
+        navList.classList.toggle("active");
+      });
     </script>
   </body>
 </html>

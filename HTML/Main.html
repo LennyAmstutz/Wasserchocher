@@ -57,12 +57,13 @@
       <div class="contact-grid">
         <div class="contact-form">
           <h3>Schreib uns eine Nachricht</h3>
-          <form>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Deine Nachricht" rows="4" required></textarea>
+          <form id="contact-form" action="send_message.php" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Deine Nachricht" rows="4" required></textarea>
             <button type="submit" class="submit-button">Senden</button>
           </form>
+          <div id="form-status"></div>
         </div>
         <div class="contact-info">
           <h3>Kontaktinformationen</h3>
@@ -91,6 +92,30 @@
     </div>
   </div>
 </footer>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = this;
+    var formStatus = document.getElementById('form-status');
+    var formData = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData
+    })
+            .then(response => response.text())
+            .then(result => {
+              formStatus.innerHTML = result;
+              if (result.includes('Vielen Dank')) {
+                form.reset();
+              }
+            })
+            .catch(error => {
+              formStatus.innerHTML = 'Es gab einen Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut.';
+            });
+  });
+</script>
 </body>
 </html>
 

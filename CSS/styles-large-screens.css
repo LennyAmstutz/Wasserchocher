@@ -1,0 +1,145 @@
+/* Styles for larger screens */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    /* Navigation */
+    .navigation .container {
+        padding: 20px 0;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 150px 0;
+    }
+
+    .hero h1 {
+        font-size: 64px;
+    }
+
+    .hero p {
+        font-size: 28px;
+    }
+
+    .cta-button {
+        font-size: 20px;
+        padding: 15px 30px;
+    }
+
+    /* About Section */
+    .about {
+        padding: 100px 0;
+    }
+
+    .about h2 {
+        font-size: 36px;
+    }
+
+    .about p {
+        font-size: 18px;
+        max-width: 800px;
+    }
+
+    /* Events Section */
+    .events {
+        padding: 100px 0;
+    }
+
+    .events h2 {
+        font-size: 36px;
+    }
+
+    .event-card {
+        max-width: 500px;
+    }
+
+    .event-image {
+        height: 250px;
+    }
+
+    .event-card h3 {
+        font-size: 24px;
+    }
+
+    .event-button {
+        font-size: 18px;
+    }
+
+    /* Contact Section */
+    .contact {
+        padding: 100px 0;
+    }
+
+    .contact h2 {
+        font-size: 36px;
+    }
+
+    .contact-grid {
+        gap: 60px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px;
+    }
+
+    .submit-button {
+        font-size: 18px;
+    }
+
+    .contact-info h3 {
+        font-size: 24px;
+    }
+
+    .contact-info p {
+        font-size: 18px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 60px 0;
+    }
+
+    .footer-content {
+        margin-bottom: 30px;
+    }
+
+    .footer h3 {
+        font-size: 24px;
+    }
+
+    .social-links a {
+        font-size: 18px;
+    }
+}
+
+/* Styles for extra large screens */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .hero h1 {
+        font-size: 72px;
+    }
+
+    .hero p {
+        font-size: 32px;
+    }
+
+    .about p,
+    .event-card p,
+    .contact-info p {
+        font-size: 20px;
+    }
+}
+

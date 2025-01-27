@@ -1,0 +1,83 @@
+/* Styles for mobile and tablet devices */
+@media (max-width: 768px) {
+    /* Navigation */
+    .navigation .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 20px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    /* About Section */
+    .about {
+        padding: 60px 0;
+    }
+
+    /* Events Section */
+    .events {
+        padding: 60px 0;
+    }
+
+    .event-card {
+        max-width: 100%;
+    }
+
+    /* Contact Section */
+    .contact {
+        padding: 60px 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 20px;
+    }
+
+    .social-links a {
+        margin: 0 10px;
+    }
+}
+
+/* Styles specific to tablets */
+@media (min-width: 569px) and (max-width: 768px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .event-card {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+

@@ -1,127 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wasserchocher</title>
-    <link rel="icon" type="image/jpg" href="../Bilder/Wasserchocherlogo.jpg" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../CSS/Style-Main.css" />
-  </head>
-  <body>
-    <nav>
-      <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <ul class="nav-list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#uber-uns">Über uns</a></li>
-        <li><a href="#ticket">Tickets</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
-    </nav>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wasserchocher - Der ultimative Partywagen</title>
+  <link rel="stylesheet" href="../CSS/styles.css">
+  <link rel="stylesheet" href="../CSS/styles-mobile-tablet.css">
+  <link rel="stylesheet" href="../CSS/styles-large-screens.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navigation">
+  <div class="container">
+    <a href="#" class="logo">Wasserchocher</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#uber-uns">Über uns</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <div class="hero-image-slider">
-      <img
-        src="../Bilder/Events/Event/MischpultBild_Querformat.jpg"
-        alt="Bild 1"
-        class="active"
-      />
-      <img src="../Bilder/Events/Event/WagenGrün.png" alt="Bild 1" />
+<main>
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Wasserchocher</h1>
+      <p>Dein mobiler Partywagen für unvergessliche Feiern</p>
+      <a href="#events" class="cta-button">Entdecke unsere Events</a>
     </div>
+  </section>
 
-    <div class="content" id="uber-uns">
-      <div class="text-block">
-        <h1>"Wasserchocher" und ihr Partywagen-Projekt</h1>
-        <p>
-          Der "Wasserchocher" ist ein Partywagen, der von Einwohnern aus Stans
-          und Ennetmoos aus einem alten SPAG Bauwagen umgebaut wurde. Er wurde
-          erstmals bei der Fasnacht in Stans 2024 eingesetzt und dient als
-          mobiler Veranstaltungsraum für Feiern und Events. Der Verein
-          "Wasserchocher" steht für Gemeinschaftssinn, kreative Projekte und
-          Nachhaltigkeit. Der SPAG Bauwagen, der bei der Fasnacht in Stans 2024
-          im Einsatz war, fand nach seinem ersten Leben einen neuen Zweck. Dank
-          der Initiative und des handwerklichen Geschicks der "Wasserchocher"
-          wurde er in einen Partywagen umgewandelt, der für Feiern und
-          Veranstaltungen genutzt werden kann. Dieser Recycling-Ansatz verleiht
-          dem Partywagen nicht nur einen besonderen Charme, sondern betont auch
-          die Nachhaltigkeit des Projekts. "Wasserchocher" stehen für mehr als
-          nur einen Partywagen oder ein Event im Senkel. Sie repräsentieren den
-          Gemeinschaftssinn, die Zusammenarbeit und die Leidenschaft für
-          kreative Projekte. Ihr Engagement und ihre Begeisterung haben bereits
-          viele Menschen in Stans und Ennetmoos inspiriert und werden auch
-          zukünftig für Aufsehen sorgen.
-        </p>
+  <section id="uber-uns" class="about">
+    <div class="container">
+      <h2>Über Wasserchocher</h2>
+      <p>Der "Wasserchocher" ist mehr als nur ein Partywagen. Er ist ein Symbol für Gemeinschaft, Kreativität und Nachhaltigkeit. Unser Projekt begann mit der Umwandlung eines alten SPAG Bauwagens in einen mobilen Veranstaltungsraum und hat sich zu einem Zentrum für unvergessliche Erlebnisse entwickelt. Wir bringen Menschen zusammen, schaffen Erinnerungen und feiern das Leben in all seinen Facetten.</p>
+    </div>
+  </section>
+
+  <section id="events" class="events">
+    <div class="container">
+      <h2>Unser nächstes Event</h2>
+      <div class="event-card">
+        <img src="/event-image.jpg" alt="Sommerfest Extravaganza" class="event-image">
+        <h3>Sommerfest Extravaganza</h3>
+        <p><span class="icon">📅</span> 15. Juli 2025</p>
+        <p><span class="icon">📍</span> Stanser Dorfplatz</p>
+        <a href="#" class="event-button">Mehr erfahren</a>
       </div>
     </div>
+  </section>
 
-    <div class="Tickets" id="ticket">
-      <h2 style="color: white">Upcoming Events</h2>
-        <!--
-                <div class="events">
-        <div class="event">
-          <img
-            src="../Bilder/Events/RealEvent/Bildschirmfoto 2024-08-14 um 22.13.35.png"
-            alt="New York"
-          />
-          <h3>Commingsoon</h3>
-          <p class="date">Commingsoon</p>
-          <p class="description">Commingsoon</p>
-          <a href="" class="buy-tickets-button">Buy Tickets</a>
+  <section id="kontakt" class="contact">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <div class="contact-grid">
+        <div class="contact-form">
+          <h3>Schreib uns eine Nachricht</h3>
+          <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Deine Nachricht" rows="4" required></textarea>
+            <button type="submit" class="submit-button">Senden</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <h3>Kontaktinformationen</h3>
+          <p><span class="icon">📧</span> wasserchocher@gmail.com</p>
+          <p><span class="icon">📞</span> +41 76 604 65 11</p>
+          <p><span class="icon">📞</span> +41 76 604 65 12</p>
+          <p><span class="icon">📍</span> Weidlistrasse 2, 6370 Stans</p>
         </div>
       </div>
-        -->
     </div>
+  </section>
+</main>
 
-    <div class="support-section" id="support">
-      <h2>Unterstützen Sie uns</h2>
-      <div class="support-content">
-        <p>
-          Möchten Sie unsere kreativen Projekte und Events unterstützen? Ihre
-          Spende hilft uns, den Partywagen weiter auszubauen und neue Veranstaltungen
-          zu planen. Jede Unterstützung wird geschätzt!
-        </p>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-info">
+        <h3>Wasserchocher</h3>
+        <p>Der ultimative Partywagen</p>
+      </div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/wasserchocher/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
       </div>
     </div>
-
-    <div class="contact-section" id="contact">
-      <div class="contact-info">
-        <h2>Kontaktiere uns</h2>
-        <p>
-          <i class="fas fa-map-marker-alt"></i> Adresse: Weidlistrasse 2, <br />
-          6370 Stans
-        </p>
-        <p><i class="fas fa-phone-alt"></i> Telefon: +41 76 604 65 12</p>
-        <p><i class="fas fa-envelope"></i> Email: wasserchocher@gmail.com</p>
-      </div>
+    <div class="copyright">
+      &copy; 2025 Wasserchocher. Alle Rechte vorbehalten.
     </div>
-
-    <footer>
-      <p>&copy; 2024 Wasserchocher | Design by Wasserchocher Team</p>
-        <a href="https://www.instagram.com/wasserchocher/"
-          ><img
-            src="/Bilder/instagram.png"
-            alt="Instagram"
-            width="30"
-            height="30"
-        /></a>
-      </p>
-    </footer>
-
-    <script src="../Javascript/WebseitenBesuchen.js"></script>
-    <script src="../Javascript/Slider.js"></script>
-    <script>
-      const mobileMenu = document.getElementById("mobile-menu");
-      const navList = document.querySelector(".nav-list");
-
-      mobileMenu.addEventListener("click", () => {
-        navList.classList.toggle("active");
-      });
-    </script>
-  </body>
+  </div>
+</footer>
+</body>
 </html>
+
